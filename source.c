@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "source.h"
 
 // комментарий
 int main() {
