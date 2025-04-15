@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest  # ОС для запуска
     steps:
     - uses: actions/checkout@v4  # клонирование репозитория
+      with:
+        fetch-depth: 0  # полная история (нужна для новых файлов)
     - uses: actions/setup-python@v4  # установка python
       with:
         python-version: "3.11"
