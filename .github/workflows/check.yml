@@ -1,0 +1,15 @@
+name: pep-8_check
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest  # ОС для запуска
+    steps:
+    - uses: actions/checkout@v4  # клонирование репозитория
+    - uses: actions/setup-python@v4  # установка python
+      with:
+        python-version: "3.11"
+    - run: pip install -r requirements.txt
+    - run: pip install pycodestyle
+    - run: pycodestyle *.py
